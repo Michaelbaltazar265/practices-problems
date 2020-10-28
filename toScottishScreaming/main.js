@@ -14,7 +14,8 @@ function toScottishScreaming(str) {
  }
  
  function isVowel(char) {
-   return 'aeiou'.includes(char);
+   const vowels = ['a', 'i', 'o', 'u'];
+   return vowels.includes(char);
 }
   
   console.log(toScottishScreaming('michael'));
