@@ -19,3 +19,34 @@ function addIndexes(arr) {
 } 
 
 ///////////////////////////////////////////////////////////
+
+// Circle or Square 
+
+// Given the radius of a circle and the area of a square, 
+// return true if the circumference of the circle is greater 
+// than the square's perimeter and false if the square's perimeter
+// is greater than the circumference of the circle.
+
+function circle_or_square(rad, area){
+    const half = (rad * 2 * 3.14) > area**(1/2)*4;
+    return half
+} 
+
+// console.log ( circle_or_square(16, 625))
+////////////////////////////////////////////////////////
+
+// Modifying the Last Character
+// modifyLast("Hello", 3) ➞ "Hellooo"
+
+// modifyLast("hey", 6) ➞ "heyyyyyy"
+
+// modifyLast("excuse me what?", 5) ➞ "excuse me what?????" 
+
+function modifyLast(str, n) {
+    var lastChar = str.charAt(str.length -1);
+    var repeat = lastChar.repeat(n -1)
+    console.log(repeat)
+    return str + repeat;	
+} 
+
+modifyLast("Hello", 3)
