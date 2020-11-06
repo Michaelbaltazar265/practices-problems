@@ -165,4 +165,3 @@ function filterArray(arr) {
     return newArr;
 }
 filterArray([1, 2, 3, "a", "b", 4])
-console.log(filterArray([1, 2, 3, "a", "b", 4]))
