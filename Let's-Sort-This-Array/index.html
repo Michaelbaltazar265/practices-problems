@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's Sort This Array</title>
+  </head>
+  <body>
+    <script>
+      function ascDesNone(arr, str) {
+        switch (str) {
+          case "Asc":
+            arr.sort();
+            break;
+          case "Des":
+            // rsort(arr);
+            console.log("Des")
+            break;
+        }
+
+        console.log(arr);
+        return arr;
+      }
+
+      // first ///
+      ascDesNone([4, 3, 2, 1], "Asc" )
+      ascDesNone([7, 8, 11, 66], "Des")
+    </script>
+  </body>
+</html>
