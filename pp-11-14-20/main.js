@@ -42,4 +42,47 @@ function addUp(num) {
 }
 
 addUp(4) 
-addUp(13)
+addUp(13) 
+
+
+
+function addition(a) {
+	
+	return `something ${a}`
+} 
+
+console.log(addition("something")) 
+
+function centuryFromYear(year) {
+    if (year >= 1901 && year <= 2000){
+        return 20
+    } else if  (year >= 1700 && year <= 1799){
+        return 17
+    }else if  (year >= 2001 && year <= 2100){
+        return 21
+    }
+    
+    
+    else if  (year >= 1700 && year <= 1799){
+        return 17
+    }
+
+} 
+
+function shapeArea (statues) { 
+
+    statues.sort((a,b) => { 
+        return a-b;
+    })
+    const min = statues[0];
+    const max = statues[statues.length - 1];
+    let count = 0; 
+
+    for(var i = min; i < max; i++){ 
+        if(statues.indexOf(i) === -1){
+            count++
+        }
+    }
+    
+    return count;
+}
