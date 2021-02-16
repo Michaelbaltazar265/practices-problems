@@ -13,4 +13,7 @@ const is21 = (num) => {
 		return "is over 21"
 	} else return "not old enough"
 } 
-// vkfdvmsv
+// vkfdvmsv 
+
+
+
