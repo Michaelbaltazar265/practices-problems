@@ -15,5 +15,11 @@ const is21 = (num) => {
 } 
 // vkfdvmsv 
 
+const repeatString = function(string, num) {
+	const str = string;
+	return str.repeat(num);
+		
+	} 
 
+	repeatString('hey', 3)
 
