@@ -21,5 +21,10 @@ const repeatString = function(string, num) {
 		
 	} 
 
-	repeatString('hey', 3)
+	repeatString('hey', 3) 
+
+	console.log(repeatString('hey', 3))
+	console.log(repeatString('Mike', 3))
+	console.log(repeatString('yes', 8))
+	console.log(repeatString('lilly', 15))
 
