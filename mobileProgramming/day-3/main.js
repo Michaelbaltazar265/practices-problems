@@ -267,18 +267,18 @@
 // }
 // display()
 
-function display()
-{
-    let num=11
-    for(;num;)
-    {
-        console.log("Programming");
-        num-=3;
-    }
-}
+// function display()
+// {
+//     let num=11
+//     for(;num;)
+//     {
+//         console.log("Programming");
+//         num-=3;
+//     }
+// }
 
 
-display()
+// display()
 
 // function display()
 // {
