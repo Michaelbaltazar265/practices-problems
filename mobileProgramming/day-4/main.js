@@ -467,46 +467,46 @@
 // add_det({empid:'E005',name:'Peter',dept:'IT',sal:6200},demo);
 
 //Promise
-const emp_det=[
-    {empid:'E001',name:'John',dept:'IT',sal:4000},
-    {empid:'E002',name:'James',dept:'SALES',sal:4200},
-    {empid:'E003',name:'Sam',dept:'ADMIN',sal:4400},
-    {empid:'E004',name:'Mac',dept:'MKTG',sal:4800}
-];
+// const emp_det=[
+//     {empid:'E001',name:'John',dept:'IT',sal:4000},
+//     {empid:'E002',name:'James',dept:'SALES',sal:4200},
+//     {empid:'E003',name:'Sam',dept:'ADMIN',sal:4400},
+//     {empid:'E004',name:'Mac',dept:'MKTG',sal:4800}
+// ];
 
-function demo()
-{
-    setTimeout(()=>{
-        let values='';
-        emp_det.forEach((val)=>{
-            values+=`EmpId=${val.empid},Name=${val.name}, Dept=${val.dept}, Salary=${val.sal}<br>`
-        })
-        document.getElementById('p1').innerHTML+=values;
-    },2000)    
-}
+// function demo()
+// {
+//     setTimeout(()=>{
+//         let values='';
+//         emp_det.forEach((val)=>{
+//             values+=`EmpId=${val.empid},Name=${val.name}, Dept=${val.dept}, Salary=${val.sal}<br>`
+//         })
+//         document.getElementById('p1').innerHTML+=values;
+//     },2000)    
+// }
 
 
-function add_det(det)
-{
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            emp_det.push(det);
-            const error=false;
-            if(!error)
-            {
-                resolve();
-            }           
-            else
-            {
-                reject('Erroneous situation');
-            }
-        },3000)       
-    })
-}
+// function add_det(det)
+// {
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             emp_det.push(det);
+//             const error=false;
+//             if(!error)
+//             {
+//                 resolve();
+//             }           
+//             else
+//             {
+//                 reject('Erroneous situation');
+//             }
+//         },3000)       
+//     })
+// }
 
-add_det({empid:'E005',name:'Peter',dept:'IT',sal:5200})
-.then(demo)
-.catch(err=>console.log(err))
+// add_det({empid:'E005',name:'Peter',dept:'IT',sal:5200})
+// .then(demo)
+// .catch(err=>console.log(err))
 
 //Miscellaneous
 
@@ -536,16 +536,16 @@ add_det({empid:'E005',name:'Peter',dept:'IT',sal:5200})
 // }
 // display();
 
-sum=0;
-for(x=1;x<=5;x++)
-{
-    if(x<4)
-    {
-        continue;
-    }
-    sum=sum+x;
-}
-console.log(sum);
+// sum=0;
+// for(x=1;x<=5;x++)
+// {
+//     if(x<4)
+//     {
+//         continue;
+//     }
+//     sum=sum+x;
+// }
+// console.log(sum);
 
 // function display()
 // {
@@ -572,10 +572,263 @@ console.log(sum);
 // display();
 
 
-function display() { 
-    let x = 2, y = 10, z = 4;
-    let p = (z > x) ? (y < x) ? (y > z) : (x + z) : (y + z);
-    console.log(`P is ${p}`);
+// function display() { 
+//     let x = 2, y = 10, z = 4;
+//     let p = (z > x) ? (y < x) ? (y > z) : (x + z) : (y + z);
+//     console.log(`P is ${p}`);
+// }
+// ////// 6
+// display()
+
+//Increment
+//Pre-Increment
+
+// let num=5,num1=9;
+// num=++num1;
+// console.log("num="+num);
+// console.log("num1="+num1);
+
+// //Post-Increment
+
+// let num2=5,num3=9;
+// // num2= ++num3
+// num2=num3++;
+// console.log("num2="+ num2);
+// console.log("num3="+ num3);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// gettting ready for the test on friday 
+
+// 1) Given an unsorted array a = [3,1,5,2,7], 
+//    find alternate elements "3,5,7", reverse them "7,5,3" and 
+//    place them in the original array
+//    Expected result [7,1,5,2,3]
+
+// function arrUnsort (arr){ 
+//     let lastEl = arr.pop(); 
+//     let firstEl = arr.shift(); 
+//     arr.push(firstEl);
+//      arr.unshift(lastEl);
+//      console.log(arr);
+//      return arr;
+// }
+// arrUnsort([3,1,5,2,7]) 
+
+// (3) Given a sorted array with the duplicates, move all the distinct elements to the front.
+
+// arr[] = [1, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6]
+
+
+// output:
+
+// arr[] = [1, 2, 3, 4, 5, 6, ..........] 
+
+// function removeDuplicates(array) {
+//     const newArr = array.filter((a, b) => array.indexOf(a) === b);
+//     console.log(newArr.length);
+//     return newArr;
+//   };
+//   console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6]))
+//   console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 4, 4, 5, 6, 6, 7,8,4,7,9]))
+
+// var arr = [  [1,2,6], [3,4,9], [5,6,8]];for (var i=0; i < arr.length; i++) {
+//     console.log(arr[i]);}
+
+// const array = ['🐑', 1, 2, '🐑', '🐑', 3, 7, 12, 2, 3 ,0];
+
+// const ex = array.filter((item, index) => {
+//   console.log(
+//     // a. Item
+//     item,
+//     // b. Index
+//     index,
+//     // c. indexOf
+//     array.indexOf(item),
+//     // d. Condition
+//     array.indexOf(item) === index,
+//   );
+//   return array.indexOf(item) === index;
+// });
+
+// console.log(ex); 
+
+
+
+
+// (4)  Given a sorted array and a key, find the two numbers whose sum is equal to the given key.
+
+// arr = [1, 3, 4, 5, 7, 8]
+
+// key = 10 
+
+// function twoSum(arr, target_num) {
+//     var map = [];
+//     var indexnum = [];
+    
+//     for (var i = 0; i < arr.length; i++)
+//     {
+//     if (map[arr[i]] != null)
+//     {
+//     var index = map[arr[i]];
+//     indexnum[0] = index;
+//     indexnum[1] = i;
+//     break;
+//     }
+//     else
+//     {
+//     map[target_num - arr[i]] = i;
+//     }
+//     }
+//     return indexnum;
+//     }
+//   console.log(twoSum([10,20,10,40,50,60,70],50));
+//   console.log(twoSum([1, 3, 4, 5, 7, 8],10)); 
+
+
+  ////////////////////////////////////////////////////////////////////////
+
+// (2) Out of the given 3 arrays with n number of elements, 
+// find out the common element(s) for all 3 arrays.
+// var arrays  = [
+//     [1,4,6,78,8,9,124,44],
+//     [44,6,9,1],
+//     [124,44,1,16,9]
+// ]
+
+// var findCommonElements= function(arrs) {
+//     var resArr = [];
+//     for (var i = arrs[0].length - 1; i > 0; i--) {
+
+
+//         for (var j = arrs.length - 1; j > 0; j--) {
+//             if (arrs[j].indexOf(arrs[0][i]) == -1) {
+//                 break;
+//             }
+//         }
+
+//         if (j === 0) {
+//             resArr.push(arrs[0][i]);
+//         }
+
+
+//     }
+//     return resArr;
+// } 
+
+
+// console.log(findCommonElements(arrays))
+
+
+// Done
+// 5
+// 54
+// 543
+// 5432
+// 54321
+
+// fiveAndDown works 
+// function fiveAndDown (){  
+//     let output = '';
+//     for (var i = 5; i >= 1; i--) {
+//         for (var j = 5; j >= i; j--) {
+//             output += j + '';
+//         }
+//         console.log(output);
+//         output = '';
+//     } 
+//   }
+//   fiveAndDown()
+// -----------------
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+
+
+// --------------------
+// 54321
+// 5432
+// 543
+// 54
+// 5
+
+function reverseOrder (){ 
+    let output = '';
+    var i, j;
+    for(i=5; i>=1; i--)
+    {
+     for(j=i; j>=1; j--)
+    //   document.write(j);
+    //  document.write("<br>");
+     output += j + ' ';
+     console.log(output)
+    }
+    console.log("\n")
 }
-////// 6
-display()
+reverseOrder()
+// --------------------
+
+// Done
+// 1
+// 2
+// 4
+// 3
+// 5
+// count worksß
+// function count (){ 
+//     for (let i = 1; i < 6; i++){ 
+//         console.log(i)
+//     }
+// }
+// count()
+
+
+// ---------
+// 1234567
+// 12345
+// 123
+// 1
+// ------------------
+
+// Done
+// 1
+// 123
+// 12345
+// 1234567
+// count7 works ß
+// function count7 (){ 
+  
+    
+//     let output = '';
+//     for (var i = 1; i <= 7; i++) {
+//         for (var j = 1; j <= i; j++) {
+//             output += j + '';
+//         }
+//         console.log(output);
+//         output = '';
+//     }
+      
+//   }
+//   count7()
+
+
+let str2 = "";
+
+            for(let i = 1; i < 8; i++ ){
+                for(let j = 1; j < 8; j++){
+                    if(i <= j ){
+                        str2 = str2.concat(j);
+                    }else{
+                        str2 = str2.concat(" ")
+                    }
+                }
+                str2 = str2.concat("\n")
+            }
+
+            console.log(str2)
+
