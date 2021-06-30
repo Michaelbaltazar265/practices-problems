@@ -498,7 +498,7 @@ matrix(oneToSixteen);
 //  console.log(sumSal()) 
 
 function myDisplayer(display) {
-    console.log(display)
+   // console.log(display)
   }
 
 let myPromise = new Promise(function(res, rej) {
@@ -547,7 +547,7 @@ function countDuplicates (arr) {
         
       }, {})
       for(const value in valueCounts) {
-        if(valueCounts[value] <= 1) {
+        if(valueCounts[value] < 0) {
           delete valueCounts[value]
         }
       }
@@ -557,7 +557,7 @@ function countDuplicates (arr) {
 
 }
 
-countDuplicates ([2,1,3,4,6,5,4,7,5,6,8,2,3,6,2,6,4,4,7,3,4,5,6]);
+countDuplicates ([ 2,1,3,4,6,5,4,7,5,6,8,2,3,6,2,6,4,4,7,3,4,5,6]);
 
 
 // 6.  
@@ -611,7 +611,7 @@ const movies = [
 function getMovies(){
 setTimeout(() => {
     movies.forEach((movie, index) => {
-        console.log(movie.title, movie.body)
+       // console.log(movie.title, movie.body)
     })
 }, 1000);
 }
@@ -670,34 +670,95 @@ init();
 
 
   // 6.  
-const listOfEmpolyee =[
-   {empid:'E001',name:'John',dept:'IT',sal:4000},
-   {empid:'E002',name:'James',dept:'SALES',sal:4200},
-   {empid:'E003',name:'Mac',dept:'MKTG',sal:4800},
-   {empid:'E004',name:'Sam',dept:'ADMIN',sal:5200}
-   ];
+// const listOfEmpolyee =[
+//    {empid:'E001',name:'John',dept:'IT',sal:4000},
+//    {empid:'E002',name:'James',dept:'SALES',sal:4200},
+//    {empid:'E003',name:'Mac',dept:'MKTG',sal:4800},
+//    {empid:'E004',name:'Sam',dept:'ADMIN',sal:5200}
+//    ];
  
- emp=listOfEmpolyee.map(function(arr){
-       return `Emp Id=${arr.name}, Salary=${arr.sal}`;
-   })
+//  emp=listOfEmpolyee.map(function(arr){
+//        return `Here is the ${arr.name},his ID is ${arr.empid} and salary ${arr.sal}`;
+//    })
  
-   emp.map(function(arr){
-       console.log(arr)
-   })
-   // map method always returns a new array
+//    emp.map(function(arr){
+//        console.log(arr)
+//    })
+//    // map method always returns a new array
  
-//    // Will return an error (Cannot read property 'forEach' of undefined)
-   emp=listOfEmpolyee.forEach(function(arr){
-       return `Emp Id=${arr.empid}, Salary=${arr.sal}`;
-   })
-   emp.forEach(function(arr){
-    console.log(arr)
-})
+// //    // Will return an error (Cannot read property 'forEach' of undefined)
+//    emp=listOfEmpolyee.forEach(function(arr){
+//        return `Emp Id=${arr.empid}, Salary=${arr.sal}`;
+//    })
+//    emp.forEach(function(arr){
+//     console.log(arr)
+// })
 
-emp=listOfEmpolyee.map(function(arr){
-    return `Emp Id=${arr.empid}, Salary=${arr.sal+(arr.sal*200)/100}`;
-})
+// emp=listOfEmpolyee.map(function(arr){
+//     return `Emp Id=${arr.empid}, Salary=${arr.sal+(arr.sal*200)/100}`;
+// })
 
-emp.forEach(function(arr){
+// emp.forEach(function(arr){
+//     console.log(arr)
+// })
+
+
+// (1) From a given array, make n elements rotate.
+// e.g. given Array:[21,54,11,35,4,18],  output Array: [4,18,21,54,11,35]
+
+function rotateElements (){ 
+    const arr = [21,54,11,35,4,18];
+    let lastEl = arr.pop(); 
+    let secondEl = arr.pop();
+     arr.unshift(secondEl, lastEl)
     console.log(arr)
-})
+    return arr;
+}
+rotateElements ()
+
+// (2) Write a program to display a Fibonacci series till 500.
+
+//      e.g. 0
+//             1
+//             1
+//             2
+//             3
+//             5
+//             8
+//            13
+//            21
+//              .
+//              . and so on....  
+
+function fibonacci (num) { 
+    let arr = [];
+    arr[0] = 0;
+    arr[1] = 1;
+
+    for(i=2;i<num;i++){
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+    return arr;
+
+}
+
+console.log(fibonacci(16))
+
+
+// (3) Write a program to calculate the sum of digits of an integer.
+//     e.g., Sum of digits of 357= 15
+
+function sumOfDigits (num){ 
+   let str = String(num).split("").map((num) =>{
+       return Number(num)
+   });
+   let sum = 0;
+   console.log(str);
+   for(let i = 0; i < str.length; i++){ 
+        sum += str[i];
+        
+   }
+
+   return sum;
+}
+console.log(sumOfDigits(2568))
