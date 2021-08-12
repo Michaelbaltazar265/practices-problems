@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html> 
+    <body> 
+
+        <h1>Ready?</h1>
+
+
+
+
+
+        <script> 
+
+        var elementH1 = document.querySelector("h1"); 
+
+       var number = 3; 
+
+        var myVar = setInterval(myTimer, 2000);
+
+        function myTimer(){ 
+           if (number === 3)
+           { 
+               elementH1.textContent = number; 
+               number--; 
+           } 
+           else if (number === 2)
+           { 
+               elementH1.textContent = number; 
+               number--; 
+
+           } 
+           else if (number === 1)
+           { 
+               elementH1.textContent = number; 
+               number--; 
+           } 
+           else if (number === 0)
+           { 
+               elementH1.textContent = "Hello World"; 
+               clearInterval(time);
+           }
+        }
+
+
+
+        </script>
+    </body>
+</html> 
